@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Cronometro</title>
+    </head>
+    <body class="flex flex-col justify-center items-center w-full h-[100vh] font-bold">
+        <div class="area flex items-center justify-center">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="flex z-10 flex-col items-center w-[30%] p-[30px] bg-[#ebe1fa] rounded-3xl text-[#ECECEC] text-[40px] cronometro max-sm:w-[90%]">
+                <div class="pantalla p-[10px] text-center bg-[#c18ffb] rounded-3xl flex items-center justify-center">
+                    <i id="cuadrado" class="fa-solid fa-square h-[20px] text-[20px] mr-[5px]"></i>
+                    <p id="parrafo">
+                        <span id="minuto">00</span>: <span id="segundo">00</span>. <span id="milesima">00</span>
+                    </p>
+                </div>
+                <div class="botones h-[60px] text-[#8B478C] text-[60px]">
+                    <button id="inicio" class="h-[60px]"><i class="fa-solid fa-play hover:text-[#4a274b] hover:scale-[1.07] mr-[5px]"></i></button>
+                    <button id="pausa" class="boton"><i class="fa-solid fa-pause hover:text-[#4a274b] hover:scale-[1.07] mr-[5px]"></i></button>
+                    <button id="reiniciar" class="boton"><i class="fa-solid fa-rotate-left hover:text-[#4a274b] hover:scale-[1.07] mr-[5px]"></i></button>
+                    <button id="bandera" class="boton"><i class="fa-solid fa-check hover:text-[#4a274b] hover:scale-[1.07] mr-[5px]"></i></button>
+                </div>
+                <div class="text-[20px] grid grid-cols-2 w-full text-center mt-[15px] text-[#2D274C] justify-items-start" id="lista">
+                </div>
+            </div>
+        </div>
+        <script src="./cronometro.js"></script>
+    </body>
+</html>
